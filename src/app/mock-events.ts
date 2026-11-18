@@ -1,7 +1,7 @@
-import { CampusEvent, CampusEventBase } from "./campus-event";
+import { CampusEvent } from "./campus-event";
 
 
-export const MOCK_EVENTS: CampusEventBase[] = [
+export const MOCK_EVENTS: CampusEvent[] = [
   {
     id: 1,
     type: 'conference',

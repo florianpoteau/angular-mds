@@ -1,0 +1,22 @@
+<article>
+  <span>{{ event().type }}</span>
+
+  <h2>{{ event().title }}</h2>
+
+  <p>{{ event().description }}</p>
+
+  <div>
+    <p>{{ event().date | date:'dd/MM/yyyy à HH:mm' }}</p>
+    <p>{{ event().location }}</p>
+
+    @if (event().capacity) {
+      <p>Capacité : {{ event().capacity }} personnes</p>
+    } @else {
+      <p>Capacité non définie</p>
+    }
+  </div>
+
+  <button type="button" (click)="favoriteToggled.emit(event().id)">☆ Favori</button>
+</article>
+<br>
+<br>

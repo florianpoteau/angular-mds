@@ -1,3 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+/* ---- Page ---- */
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f5f7;
+  color: #222;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+/* ---- Barre de recherche + menu déroulant ---- */
+input[type='search'],
+select {
+  padding: 8px 12px;
+  margin: 0 8px 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+
+input[type='search'] {
+  width: 300px;
+  max-width: 100%;
+}
+
+/* ---- Grille des cartes ---- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* ---- Une carte ---- */
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+article span {
+  align-self: flex-start;
+  padding: 2px 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #e8e8ff;
+  color: #4040a0;
+  border-radius: 999px;
+}
+
+article h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+article button {
+  margin-top: auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+}
+
+article button:hover {
+  background: #fff4cc;
+}

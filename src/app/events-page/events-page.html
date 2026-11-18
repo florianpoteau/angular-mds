@@ -1,0 +1,18 @@
+<app-search-bar
+  [query]="query()"
+  (queryChange)="query.set($event)"
+/>
+
+<select #choix [value]="category()" (change)="onCategoryChange(choix.value)">
+  <option value="all">Toutes les catégories</option>
+  <option value="conference">Conférence</option>
+  <option value="atelier">Atelier</option>
+  <option value="sport">Sport</option>
+</select>
+
+<p>{{ resultCount() }} résultat(s)</p>
+
+<app-event-list
+  [events]="visibleEvents()"
+  (favoriteToggled)="onFavoriteToggled($event)"
+/>

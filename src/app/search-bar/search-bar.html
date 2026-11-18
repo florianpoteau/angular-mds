@@ -1,0 +1,7 @@
+<input
+  #champ
+  type="search"
+  placeholder="Rechercher un événement…"
+  [value]="query()"
+  (input)="queryChange.emit(champ.value)"
+/>

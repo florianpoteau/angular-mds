@@ -1,12 +1,11 @@
+export type EventCategory = 'conference' | 'atelier' | 'sport';
 
-export interface CampusEventBase {
+export interface CampusEvent {
   id: number;
-  type: CampusEvent;
+  type: EventCategory;
   title: string;
   date: string;
   location: string;
   description: string;
   capacity?: number;
 }
-
-export type CampusEvent = 'conference' | 'atelier' | 'sport'

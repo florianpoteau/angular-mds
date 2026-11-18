@@ -1,0 +1,10 @@
+<div class="events-grid">
+  @for (event of events(); track event.id) {
+    <app-event-card
+      [event]="event"
+      (favoriteToggled)="favoriteToggled.emit($event)"
+    />
+  } @empty {
+    <p>Aucun événement ne correspond à ta recherche.</p>
+  }
+</div>
